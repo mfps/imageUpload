@@ -1,0 +1,67 @@
+#file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    +label {
+        color: #d3394c;
+        max-width: 80%;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        display: flex;
+        align-items: baseline;
+        overflow: hidden;
+        padding: .625rem 1.25rem; // &:before {
+        //     content: url('./assets/upload.svg');
+        //     width: 1em;
+        //     height: 1em;
+        //     vertical-align: middle;
+        //     fill: #d3394c;
+        //     margin-top: -0.25em;
+        //     margin-right: 0.25em;
+        // }
+        svg {
+            fill: currentColor;
+        }
+        .dropbox-text {
+            padding-left: 5px;
+        }
+    }
+}
+
+#dropbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed lightcoral;
+    width: 250px;
+    height: 250px;
+}
+
+#preview-image {
+    column-width: 10em;
+    column-gap: .3em;
+}
+
+.preview {
+    width: 100%;
+}
+
+.error-message {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    background-color: deeppink;
+    padding: 5px 25px;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+.error-info {
+    color: white;
+}
