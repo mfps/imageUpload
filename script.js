@@ -4,7 +4,6 @@ class FileSelect {
     this.fileInput = document.getElementById('file');
     this.previewImageContainer = document.getElementById('preview-image');
     this.sendFilesBtn = document.getElementById('send-files');
-    this.j = 0;
     this.images = [];
     this.init();
   }
@@ -52,6 +51,7 @@ class FileSelect {
 
       const img = this.createImageElement(file);
       this.images.push(file);
+
       var reader = new FileReader();
       reader.onload = (aImg => {
         return e => {
@@ -127,12 +127,14 @@ class FileSelect {
   errorHandler(error) {
     const errorSection = document.createElement('section');
     errorSection.classList.add('error-message');
+
     error.map(val => {
       const error = document.createElement('div');
       error.classList.add('error-info');
-      error.innerHTML = `${val.name} coudn't be added!`;
+      error.innerHTML = `${val.name} couldn't be added!`;
       errorSection.appendChild(error);
     });
+
     document.body.appendChild(errorSection);
 
     setTimeout(() => {

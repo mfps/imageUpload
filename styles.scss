@@ -6,7 +6,7 @@
     position: absolute;
     z-index: -1;
     +label {
-        color: #d3394c;
+        color: deeppink;
         max-width: 80%;
         font-size: 1.25rem;
         font-weight: 700;
@@ -16,15 +16,7 @@
         display: flex;
         align-items: baseline;
         overflow: hidden;
-        padding: .625rem 1.25rem; // &:before {
-        //     content: url('./assets/upload.svg');
-        //     width: 1em;
-        //     height: 1em;
-        //     vertical-align: middle;
-        //     fill: #d3394c;
-        //     margin-top: -0.25em;
-        //     margin-right: 0.25em;
-        // }
+        padding: .625rem 1.25rem;
         svg {
             fill: currentColor;
         }
